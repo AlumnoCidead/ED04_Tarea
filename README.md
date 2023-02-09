@@ -3,16 +3,23 @@ Creación de un repositorio público en el que poder llevar a cabo los ejercicio
 
 
 package cuentas;
+
+
 /**
  * 
  * @author Sandra Macías Aragón
  * @version 6/02/2023
  */
+ 
+ 
 public class Main {
+
 /**
  * método principal de la clase Main
  * @param args 
  */
+ 
+ 
     public static void main(String[] args) {
     
         CCuenta cuenta1;
@@ -20,10 +27,14 @@ public class Main {
 
         operativa_cuenta(0);
     }
+    
+    
     /**
      * método que realiza operaciones con el contenido de la cuenta
      * @param cantidad 
      */
+     
+     
     public static void operativa_cuenta(float cantidad) {
         
         CCuenta cuenta1;
@@ -48,65 +59,89 @@ public class Main {
 
 public class CCuenta {
 
+
     /**método que devuelve nombre
      * @return nombre
      */
+     
+     
     public String getNombre() {
         return nombre;
     }
+    
 
     /**
      * método que establece un valor para nombre
      * @param nombre 
      */
+     
+     
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 
     /**
      * método que devuelve una cuenta
      * @return cuenta
      */
+     
+     
     public String getCuenta() {
         return cuenta;
     }
+
 
     /**
      * método que establece un valor para cuenta
      * @param cuenta
      */
+     
+     
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
+
 
     /**
      * método que devuelve saldo
      * @return saldo
      */
+     
+     
     public double getSaldo() {
         return saldo;
     }
+
 
     /**
      * método que establece un valor para saldo
      * @param saldo 
      */
+     
+     
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+    
 
     /**
      * método que devuelve tipo de interes
      * @return tipoInteres
      */
+     
+     
     public double getTipoInteres() {
         return tipoInteres;
     }
+
 
     /**
      * método que establece un valor para tipoInteres
      * @param tipoInteres the tipoInteres to set
      */
+     
+     
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
     }
@@ -118,6 +153,8 @@ public class CCuenta {
   
     public CCuenta() {
     }
+    
+    
     /**
      * Constructor de la clase CCuenta
      * @param nom
@@ -125,34 +162,48 @@ public class CCuenta {
      * @param sal
      * @param tipo 
      */
+     
+     
     public CCuenta(String nom, String cue, double sal, double tipo) {
         nombre = nom;
         cuenta = cue;
         saldo = sal;
     }
+    
+    
     /**
      * método que pregunta por el estado de la cuenta
      * @return getSaldo
      */
+     
+     
     public double estado() {
         return getSaldo();
     }
+    
+    
     /**
      * método para ingresar cantidad determinada de saldo
      * @param cantidad
      * @throws Exception 
      */
+     
+     
     public void ingresar(double cantidad) throws Exception {
         if (cantidad < 0) {
             throw new Exception("No se puede ingresar una cantidad negativa");
         }
         setSaldo(getSaldo() + cantidad);
     }
+    
+    
     /**
      * método para retirar cantidad determinada de saldo
      * @param cantidad
      * @throws Exception 
      */
+     
+     
     public void retirar(double cantidad) throws Exception {
         if (cantidad <= 0) {
             throw new Exception("No se puede retirar una cantidad negativa");
